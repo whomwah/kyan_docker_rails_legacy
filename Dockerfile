@@ -5,6 +5,7 @@ ENV REFRESHED_AT 2016-08-11
 # Install packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
   build-essential \
+  wget \
   ruby-dev \
   libgdbm-dev \
   libncurses5-dev \
