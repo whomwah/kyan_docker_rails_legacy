@@ -3,15 +3,19 @@ MAINTAINER duncan@kyan.com
 ENV REFRESHED_AT 2016-08-11
 
 # Install packages
-RUN apt-get update && apt-get -y install wget \
+RUN apt-get update && apt-get install -y --no-install-recommends \
   build-essential \
+  ruby-dev \
   libgdbm-dev \
   libncurses5-dev \
   libffi-dev \
   libyaml-dev \
   libreadline-dev \
   libpq-dev \
+  mysql-client \
+  libmysqlclient-dev \
   nodejs \
+  git \
   && rm -rf /var/lib/apt/lists/*
 
 # Install Ruby-Install
